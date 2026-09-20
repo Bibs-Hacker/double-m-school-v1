@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "MERCYVERSE",
+  "short_name": "MERCYVERSE",
+  "description": "MERCYVERSE — a beautiful offline-first campus companion for Mercy Merab.",
+  "start_url": "/",
+  "scope": "/",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#080b16",
+  "theme_color": "#101426",
+  "prefer_related_applications": false,
+  "icons": [
+    {"src":"https://files.catbox.moe/lbrtj7.jpeg","sizes":"192x192","type":"image/jpeg","purpose":"any"},
+    {"src":"https://files.catbox.moe/lbrtj7.jpeg","sizes":"512x512","type":"image/jpeg","purpose":"any maskable"}
+  ],
+  "categories": ["education", "productivity", "lifestyle"],
+  "launch_handler": {"client_mode":"navigate-existing"}
+}

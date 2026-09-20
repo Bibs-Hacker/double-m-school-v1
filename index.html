@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101426">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MERCYVERSE">
+  <meta name="description" content="MERCYVERSE — a beautiful offline-first campus companion for Mercy Merab.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="https://files.catbox.moe/lbrtj7.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="https://files.catbox.moe/lbrtj7.jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <title>MERCYVERSE</title>
+</head>
+<body>
+  <div id="app">
+    <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+    <header class="topbar">
+      <div class="brand"><img src="https://files.catbox.moe/lbrtj7.jpeg" alt="MERCYVERSE" class="brand-icon"><div><strong>MERCYVERSE</strong><span>Campus companion</span></div></div>
+      <div class="status-pill" id="syncStatus"><i></i><span>Checking…</span></div>
+    </header>
+
+    <main class="hero">
+      <section class="hero-card glass">
+        <div class="hero-icon"><img src="https://files.catbox.moe/lbrtj7.jpeg" alt="MERCYVERSE icon"></div>
+        <p class="eyebrow">YOUR PERSONAL DIGITAL CAMPUS</p>
+        <h1>Everything Mercy's campus life needs, in one lovely place.</h1>
+        <p class="lead">Academic planning, expenses, documents, memories and more — designed to keep working even when the internet disappears.</p>
+        <div class="actions">
+          <button class="primary" id="installButton" hidden><span class="download-icon">↓</span> Install MERCYVERSE</button>
+          <button class="secondary" id="openInstallGuide">How installation works</button>
+        </div>
+        <div class="installed-note" id="installedNote" hidden>✓ MERCYVERSE is running as an installed application.</div>
+      </section>
+
+      <section class="feature-grid">
+        <article class="feature glass"><div class="feature-icon">01</div><h2>Offline first</h2><p>Your local app shell remains available without internet.</p></article>
+        <article class="feature glass"><div class="feature-icon">02</div><h2>Cloud-ready sync</h2><p>Connect your existing backend later for multi-device synchronization.</p></article>
+        <article class="feature glass"><div class="feature-icon">03</div><h2>App-like launch</h2><p>Installed mode opens in its own standalone application window.</p></article>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="installModal" hidden>
+    <div class="install-modal glass" role="dialog" aria-modal="true" aria-labelledby="installTitle">
+      <button class="close" id="closeInstall" aria-label="Close">×</button>
+      <div class="modal-orb"><img src="https://files.catbox.moe/lbrtj7.jpeg" alt=""></div>
+      <p class="eyebrow">A LITTLE HOME FOR MERCYVERSE</p>
+      <h2 id="installTitle">Take MERCYVERSE with you.</h2>
+      <p>Install it once and it gets its own app icon, its own window and an offline-friendly experience. No ordinary browser tab feeling when launched from the installed app.</p>
+      <div class="install-benefits"><span>✓ Home-screen / desktop icon</span><span>✓ Standalone app window</span><span>✓ Offline app shell</span><span>✓ Faster return to your campus space</span></div>
+      <button class="primary full" id="modalInstall" hidden>Install now</button>
+      <button class="secondary full" id="manualGuide">Show device instructions</button>
+      <div class="manual" id="manualText" hidden></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
